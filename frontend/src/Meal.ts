@@ -4,8 +4,4 @@ export interface Meal {
     calories: number,
     prepMins: number,
     cookMins: number,
-    _links: {
-        meals: string,
-        self: string,
-    },
 };
