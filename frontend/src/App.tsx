@@ -3,7 +3,7 @@ import './App.css'
 import Navbar from './Navbar'
 import Home from './Home'
 import Search from './Search'
-import MealDetails from './MealDetails'
+import Recipe from './Recipe'
 
 function App() {
   return (
@@ -12,9 +12,8 @@ function App() {
         <Navbar />
         <Routes>
           <Route index element={<Home />} />
-          <Route path='meals' element={<Search />}>
-            <Route path=':id' element={<MealDetails />} />
-          </Route>
+          <Route path='meals' element={<Search />} />
+          <Route path='meals/:id' element={<Recipe />} />
         </Routes>
       </BrowserRouter>
     </>

@@ -8,13 +8,13 @@ export default function Search() {
 
     async function getMeals() {
         const data = await fetch("http://localhost:8080/meals");
-        const a = await data.json();
-        return a["_embedded"]["mealList"];
+        const list = await data.json();
+        return list;
     }
 
     useEffect(() => {
         getMeals().then(allMeals => setMeals(allMeals));
-    }, []);
+    });
 
     return (
         <div>
